@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js example</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+  </style>
+  <!-- <script src="../p5.min.js"></script> -->
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+  <!-- <script src="https://unpkg.com/p5.js-svg@1.5.1"></script> -->
+  <script src="halftone-image.js"></script>
+  <script src="sketch.js"></script>
+</head>
+
+<body>
+  <main>
+
+    <ul>
+      <li>
+        <label for="num_x">num x</label>
+        <input type="range" id="num_x" name="num_x" min="0" max="500" oninput="this.nextElementSibling.value = this.value">
+        <output>250</output>
+      </li>
+      <li>
+        <label for="num_y">num y</label>
+        <input type="range" id="num_y" name="num_y" min="0" max="500" oninput="this.nextElementSibling.value = this.value">
+        <output>250</output>
+      </li>
+      <li>
+        <label for="size">size</label>
+        <input type="range" id="size" name="size" min="0" max="15" value="4" oninput="this.nextElementSibling.value = this.value">
+        <output>4</output>
+      </li>
+      <li>
+        <label for="cyan_angle">cyan_angle</label>
+        <input type="range" id="cyan_angle" name="cyan_angle" min="0" max="180" value="105" oninput="this.nextElementSibling.value = this.value">
+        <output>105</output>
+      </li>
+      <li>
+        <label for="magenta_angle">magenta_angle</label>
+        <input type="range" id="magenta_angle" name="magenta_angle" min="0" max="180" value="75" oninput="this.nextElementSibling.value = this.value">
+        <output>75</output>
+      </li>
+      <li>
+        <label for="yellow_angle">yellow_angle</label>
+        <input type="range" id="yellow_angle" name="yellow_angle" min="0" max="180" value="90" oninput="this.nextElementSibling.value = this.value">
+        <output>90</output>
+      </li>
+      <li>
+        <label for="black_angle">black_angle</label>
+        <input type="range" id="black_angle" name="black_angle" min="0" max="180" value="15" oninput="this.nextElementSibling.value = this.value">
+        <output>15</output>
+      </li>
+      <li>
+        <input type="button" id="save" value="Save">
+      </li>
+      <li>
+        <input type="file" name="img-loader" id="img-loader" size="24" onchange="load_new_img(event)" alt=""/>
+      </li>
+
+    </ul>
+  </main>
+</body>
+
+</html>
