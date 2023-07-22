@@ -1,6 +1,6 @@
 
-let width = 1000;
-let height = 1000;
+let width = 1280;
+let height = 857;
 
 let halftone_img;
 let img;
@@ -150,6 +150,7 @@ function load_new_img(event) {
       console.log("loaded");
       width = img.width;
       height = img.height;
+      resizeCanvas(width, height);
       setup();
     });
   }
